@@ -178,7 +178,7 @@ config:
         pim/controller-registry:
             defaultController: pim/controller/template
             controllers:
-                pim_enrich_associationtype_edit:               pim/controller/form
+                pim_enrich_associationtype_edit:               pim/controller/association-type
                 pim_enrich_attribute_create:                   pim/controller/form
                 pim_enrich_attribute_edit:                     pim/controller/form
                 pim_enrich_attributegroup_create:              pim/controller/form
@@ -188,13 +188,15 @@ config:
                 pim_enrich_categorytree_index:                 pim/controller/form
                 pim_enrich_channel_edit:                       pim/controller/channel
                 pim_enrich_channel_create:                     pim/controller/channel
-                pim_enrich_family_edit:                        pim/controller/form
-                pim_enrich_group_edit:                         pim/controller/form
+                pim_enrich_family_edit:                        pim/controller/family
                 pim_enrich_grouptype_edit:                     pim/controller/form
                 pim_enrich_product_edit:                       pim/controller/product
+                pim_enrich_group_edit:                         pim/controller/variant-group
                 pim_enrich_variant_group_edit:                 pim/controller/variant-group
-                pim_importexport_export_profile_edit:          pim/controller/form
-                pim_importexport_import_profile_edit:          pim/controller/form
+                pim_importexport_export_profile_edit:          pim/controller/job-instance
+                pim_importexport_import_profile_edit:          pim/controller/job-instance
+                pim_importexport_import_profile_show:          pim/controller/job-instance
+                pim_importexport_export_profile_show:          pim/controller/job-instance
                 pim_enrich_currency_toggle:                    pim/controller/redirect
                 pim_enrich_mass_edit_action_sequential_edit:   pim/controller/redirect
                 oro_user_create:                               pim/controller/form
@@ -208,11 +210,9 @@ config:
                 pim_importexport_import_profile_launch_upload: pim/controller/redirect
                 pim_importexport_import_profile_launch:        pim/controller/redirect
                 pim_importexport_import_profile_remove:        pim/controller/redirect
-                pim_importexport_import_profile_show:          pim/controller/form
                 pim_importexport_export_profile_launch:        pim/controller/redirect
                 pim_importexport_export_profile_remove:        pim/controller/redirect
                 oro_user_profile_update:                       pim/controller/form
-
 
     paths:
         pim/app:                            pimenrich/js/app
@@ -226,7 +226,12 @@ config:
         pim/controller/template:            pimenrich/js/controller/template
         pim/controller/form:                pimenrich/js/controller/form
         pim/controller/product:             pimenrich/js/controller/product
+        pim/controller/family:              pimenrich/js/controller/family
+        pim/controller/channel:             pimenrich/js/controller/channel
+        pim/controller/association-type:    pimenrich/js/controller/association-type
         pim/controller/redirect:            pimenrich/js/controller/redirect
+        pim/controller/job-instance:        pimenrich/js/controller/job-instance
+        pim/controller/variant-group:       pimenrich/js/controller/variant-group
 
         jquery.wizard:                      pimenrich/js/jquery.wizard
         jstree/jquery.jstree.tree_selector: pimenrich/js/jstree/jquery.jstree.tree_selector
