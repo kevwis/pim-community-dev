@@ -105,3 +105,4 @@ Feature: Import XLSX products
     When I am on the "xlsx_footwear_product_import" import job page
     And I launch the import job
     And I wait for the "xlsx_footwear_product_import" job to finish
+    Then I should not see the text "The fields \"catégories, famille, groupes\" do not exist"

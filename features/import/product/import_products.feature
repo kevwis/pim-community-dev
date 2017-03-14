@@ -343,3 +343,4 @@ Feature: Execute a job
     When I am on the "csv_footwear_product_import" import job page
     And I launch the import job
     And I wait for the "csv_footwear_product_import" job to finish
+    Then I should not see the text "The fields \"catégories, famille, groupes\" do not exist"

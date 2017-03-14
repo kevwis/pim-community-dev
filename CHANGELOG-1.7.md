@@ -5,10 +5,6 @@
 - PIM-6085: Association import step is not working with custom column name.
 - PIM-6207: correctly dismiss "Unsaved changes" message on system configuration.
 
-## BC breaks
-
-`pim_connector.reader.file.xlsx_association` is now `pim_connector.reader.file.xlsx_product.class` instead of `pim_connector.reader.file.xlsx.class`
-
 # 1.7.0 (2017-03-14)
 
 ## Functional improvements
